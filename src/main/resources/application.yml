@@ -1,0 +1,26 @@
+
+server:
+  port:8080
+
+#mq
+spring:
+  rabbitmq:
+    host: 120.24.94.91
+    port: 5672
+    virtual-host: /dev
+    password: ljb112233
+    username: admin
+    # open message second confirm, publisher to exchange
+    publisher-confirm-type: correlated
+
+    # open message second confirm, exchange to queue's reliability
+    publisher-returns: true
+
+    # true means if exchange fail to pass data to route, will return to publisher
+    template:
+      mandatory: true
+
+    # manually confirm ack
+    listener:
+      simple:
+        acknowledge-mode: manual
