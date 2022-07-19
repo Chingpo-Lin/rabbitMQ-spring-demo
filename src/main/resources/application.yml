@@ -8,7 +8,7 @@ spring:
     host: 120.24.94.91
     port: 5672
     virtual-host: /dev
-    password: ljb112233
+    password: cannot let u know
     username: admin
     # open message second confirm, publisher to exchange
     publisher-confirm-type: correlated
